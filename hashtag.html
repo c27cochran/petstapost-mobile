@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Keeping the Internet Cute.">
+    <meta name="author" content="Carter Cochran">
+    <link rel="canonical" href="http://petstapost.com/"/>
+
+
+    <title>Petstapost</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/petstapost.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/cropper.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="foundation-icons/foundation-icons.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/google-fonts.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js does not work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav id="verified-navbar" class="navbar navbar-custom navbar-yappy navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle navbar-mobile-tog" data-toggle="collapse" data-target=".navbar-mobile">
+                    <span class="mobile-notifications"></span><i class="fa fa-bars"></i>
+                </button>
+                <a id="kibble-link" class="navbar-brand kibble-header" href="">
+                    <span class="light logo" style="margin-left: 20px;">Kibble</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="hidden" href="#page-top"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle navbar-web-tog" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="drop-notifications"></span><i class="fa fa-cog"></i>&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a class="show-notifications" href="" >
+                                    <i class="fa fa-bullhorn"></i>&nbsp;Notifications&nbsp;<span class="notifications"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="home-link" href="">
+                                    <i class="fa fa-home"></i>&nbsp;My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="search.html">
+                                    <i class="fa fa-users"></i>&nbsp;Search for friends
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about-verified.html">
+                                    <i class="fa fa-paw" style="margin-left:-10px;"></i>&nbsp;About Petstapost
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="logout.html">
+                                    <i class="fa fa-sign-out"></i>&nbsp;<span class="light">Sign Out</span>
+                                </a>
+                            </li>
+                        </ul>
+                  </li>
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-mobile" style="float:left;">
+                <ul class="nav navbar-nav navbar-toggle navbar-mobile">
+                    <li>
+                        <a class="show-notifications" href="" >
+                            <i class="fa fa-bullhorn"></i>&nbsp;Notifications&nbsp;<span class="notifications"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="home-link" href="">
+                            <i class="fa fa-home"></i>&nbsp;My Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <i class="fa fa-users"></i>&nbsp;Search for friends
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about-verified.html">
+                            <i class="fa fa-paw" style="margin-left:-10px;"></i>&nbsp;About Petstapost
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="logout.html">
+                            <i class="fa fa-sign-out"></i>&nbsp;<span class="light">Sign Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div id="hashtag-container"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; <span class="logo" style="color: #90f5a5;">Petstapost</span> <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/petstapost.js"></script>
+    
+    <!-- Ajax Popup -->
+    <script src="js/magnific-popup.min.js"></script>
+
+    <script src="cordova.js"></script>
+
+    <script type="text/javascript">
+
+        $(function() {
+
+            var hashtag = getUrlParameter('hashtag');
+            var username = localStorage.getItem('pp_username');
+
+            $(".show-notifications").attr("href", "http://petstapost.com/mobile/show-notifications.php?user="+username);
+
+            $("#kibble-link").attr("href", "kibble.html?user="+username);
+            $(".home-link").attr("href", "yappy.html?user="+username);
+
+            if (!username) {
+                window.location.href = 'index.html';
+                localStorage.clear();
+            }
+
+            $.ajax({
+                type: "POST",
+                url: 'http://petstapost.com/mobile/hashtag-data.php',
+                data: 'username='+username+'&hashtag='+hashtag,
+                success: function(resp) {
+                    $("#hashtag-container").html(resp);
+                },
+                error: function() {
+                    $("#hashtag-container").html('<h1 style="padding: 100px 40px 0 40px;">There was an error.</h1>');
+                }
+            });
+            
+
+        });
+
+    </script>
+
+</body>
+
+</html>

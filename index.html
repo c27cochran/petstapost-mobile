@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Keeping the Internet Cute.">
+    <meta name="author" content="Carter Cochran">
+    <link rel="canonical" href="http://petstapost.com/"/>
+
+
+    <title>Petstapost</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/petstapost.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/google-fonts.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js does not work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav id="ajax-navbar" class="navbar navbar-custom navbar-fixed-top" role="navigation" style="display:none;">
+    </nav>
+
+    <a id="back-link" class="back-link hidden" href="#">
+        <i class="fa fa-arrow-left"></i>&nbsp;<span class="light">Back</span>
+    </a>
+
+    <div id="error-container"></div>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 title-div">
+                        <h1 class="brand-heading main-logo logo">Petstapost</h1>
+                        <p class="intro-text">Keeping the Internet Cute.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 login-div">
+                        <div id="login-container">
+                            <div id="login-response"></div>
+                            <div id="social-icons-conatainer">
+                                <div class="modal-body-left">
+                                    <form id="login-form" class="login-form" name="login-form" method="GET">
+                                        <div class="form-group">
+                                            <input type="text" id="username-login" name="username-login" placeholder="Username or Email" value="" class="form-control login-field">
+                                            <i class="fa fa-user login-field-icon"></i>
+                                        </div>
+                        
+                                        <div class="form-group">
+                                            <input type="password" id="password-login" name="password-login" placeholder="Password" value="" class="form-control login-field">
+                                            <i class="fa fa-key login-field-icon"></i>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input id="login-checkbox" class="login-checkbox" type="checkbox" name="autologin" value="1"><label for="login-checkbox" class="login-checkbox">Remember Me</label>
+                                            <br>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="submit" id="submit_login" class="btn btn-default modal-login-btn" value="Log in">
+                                        </div>
+
+                                        <a id="lost-password-link" class="login-link text-center form-group page-scroll" href="#page-top">Lost your password?</a>
+
+                                    </form>
+                                </div>
+                            
+                                <div class="modal-body-right">
+                                    <div class="modal-social-icons">
+                                        <a href="#page-top" id="create-account-button" class="btn btn-default modal-login-btn form-group">Create Account</a>
+                                    </div> 
+                                    <a id="about" class="btn btn-default" href="about.html">About Us</a>
+                                </div>  
+                            </div> 
+                        </div>
+                        <div id="register-container" style="display:none;">
+                            <a id="back-link-register" class="back-link-ipad" href="#">
+                                <i class="fa fa-arrow-left"></i>&nbsp;<span class="light">Back</span>
+                            </a>
+                            <div id="register-response"></div>
+                            <div class="register-modal-content">
+                                <form id="register-form" class="register-form" name="register-form" method="GET">
+                                    <div class="form-group">
+                                        <input type="text" id="username_register" name="username_register" placeholder="Username" value="" class="form-control login-field">
+                                        <i class="fa fa-user login-field-icon"></i>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" id="firstname_register" name="firstname_register" placeholder="First Name" value="" class="form-control login-field">
+                                        <i class="fa fa-star-o login-field-icon"></i>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" id="lastname_register" name="lastname_register" placeholder="Last Name" value="" class="form-control login-field">
+                                        <i class="fa fa-star-o login-field-icon"></i>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="email" id="email_register" name="email_register" placeholder="Email" value="" class="form-control login-field">
+                                        <i class="fa fa-envelope-o login-field-icon"></i>
+                                    </div>
+                    
+                                    <div class="form-group">
+                                        <input type="password" id="password_register" name="password_register" placeholder="Password" value="" class="form-control login-field">
+                                        <i class="fa fa-key login-field-icon"></i>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" id="submit_register" class="btn btn-default modal-login-btn" value="Create Account">
+                                    </div>
+                                </form>
+                                <label class="form-group agreement">
+                                    By clicking "Create Account", you agree to our <a href="terms.html">terms of use</a> and have read our <a href="privacy.html">privacy policy.</a>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="recover-container" style="display:none;">
+                            <a id="back-link-recover" class="back-link-ipad" href="#">
+                                <i class="fa fa-arrow-left"></i>&nbsp;<span class="light">Back</span>
+                            </a>
+                            <div id="recover-response"></div>
+                            <div class="recover-modal-content">
+                                <form id="recover-form" class="recover-form" name="recover-form" method="GET">
+                                    <div class="form-group">
+                                        <input type="email" id="recover-email" name="recover-email" placeholder="Email" value="" class="form-control login-field">
+                                        <i class="fa fa-envelope-o login-field-icon"></i>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" id="submit_recover" class="btn btn-default modal-login-btn" value="Get Password">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Footer -->
+    <footer style="bottom: -25px;">
+        <div class="container text-center">
+            <p>Copyright &copy; <span class="logo" style="color: #90f5a5;">Petstapost</span> <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/petstapost.js"></script>
+
+    <!-- Ajax Popup -->
+    <script src="js/magnific-popup.min.js"></script>
+
+    <!-- Offline Detect JavaScript -->
+    <script src="js/offline.min.js"></script>
+
+    <!-- Set timezone -->
+    <script src="js/jstz.min.js"></script>
+
+    <script src="cordova.js"></script>
+
+    <script type="text/javascript">
+
+        $(function() {
+
+            localStorage.setItem("pp_timezone", jstz.determine().name());
+
+            var remember_me = localStorage.getItem('pp_remember_me');
+
+            if (remember_me == 1) {
+                
+                var username = localStorage.getItem('pp_username');
+                var code = localStorage.getItem('pp_code');
+
+                $.ajax({
+                    type: "POST",
+                    url: 'http://petstapost.com/mobile/remembered.php',
+                    data: 'usr='+username+'&code='+code,
+                    success: function(resp) {
+                        if (resp.indexOf("kibble") > -1) {
+                            window.location.href = resp;
+                        }
+                    },
+                    error: function() {
+                        $("#error-container").html('<h1 style="padding: 100px 40px 0 40px;">There was an error.</h1>');
+                    }
+                });
+            }
+
+        });
+
+        Offline.options = {
+          checks: {xhr: {url: 'http://petstapost.com/privacy.php'}}
+        }
+        var run = function(){
+          if (Offline.state === 'up')
+            Offline.check();
+        }
+        setInterval(run, 5000);
+    </script>
+
+</body>
+
+</html>

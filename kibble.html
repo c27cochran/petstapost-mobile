@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Keeping the Internet Cute.">
+    <meta name="author" content="Carter Cochran">
+    <link rel="canonical" href="http://petstapost.com/"/>
+
+
+    <title>Petstapost</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/petstapost.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/cropper.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="foundation-icons/foundation-icons.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/google-fonts.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js does not work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function imgLoaded(img){
+            var imgWrapper = img.parentNode;
+
+            imgWrapper.className += imgWrapper.className ? ' loaded' : 'loaded';
+        };
+    </script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav id="verified-navbar" class="navbar navbar-custom navbar-yappy navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle navbar-mobile-tog" data-toggle="collapse" data-target=".navbar-mobile">
+                    <span class="mobile-notifications"></span><i class="fa fa-bars"></i>
+                </button>
+                <a id="profile-link" class="navbar-brand" href="">
+                    <i class="fa fa-user"></i>&nbsp;<span class="light logo">Profile</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="hidden" href="#page-top"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle navbar-web-tog" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="drop-notifications"></span><i class="fa fa-cog"></i>&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a class="show-notifications" href="" >
+                                    <i class="fa fa-bullhorn"></i>&nbsp;Notifications&nbsp;<span class="notifications"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="home-link" href="">
+                                    <i class="fa fa-home"></i>&nbsp;My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="search.html">
+                                    <i class="fa fa-users"></i>&nbsp;Search for friends
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about-verified.html">
+                                    <i class="fa fa-paw" style="margin-left:-10px;"></i>&nbsp;About Petstapost
+                                </a>
+                            </li>
+                            <li>
+                                <a id="change-modal-launcher" href="#" data-toggle="modal" data-target="#account-modal">
+                                    <i class="fa fa-unlock-alt"></i>&nbsp;Change password
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="logout.html">
+                                    <i class="fa fa-sign-out"></i>&nbsp;<span class="light">Sign Out</span>
+                                </a>
+                            </li>
+                        </ul>
+                  </li>
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-mobile" style="float:left;">
+                <ul class="nav navbar-nav navbar-toggle navbar-mobile">
+                    <li>
+                        <a class="show-notifications" href="" >
+                            <i class="fa fa-bullhorn"></i>&nbsp;Notifications&nbsp;<span class="notifications"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="home-link" href="">
+                            <i class="fa fa-home"></i>&nbsp;My Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <i class="fa fa-users"></i>&nbsp;Search for friends
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about-verified.html">
+                            <i class="fa fa-paw" style="margin-left:-10px;"></i>&nbsp;About Petstapost
+                        </a>
+                    </li>
+                    <li>
+                        <a id="change-modal-launcher" href="#" data-toggle="modal" data-target="#account-modal">
+                            <i class="fa fa-unlock-alt"></i>&nbsp;Change password
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="logout.html">
+                            <i class="fa fa-sign-out"></i>&nbsp;<span class="light">Sign Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div id="error-container"></div>
+
+    <!-- Intro Header -->
+    <header class="intro-home">
+        <div class="intro-body">
+            <div class="container profile-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row profile-row">
+                            <form class="video-upload" action="http://petstapost.com/mobile/post-upload.php" method="POST" enctype="multipart/form-data">
+                                <div class="col-md-3"></div>
+                                <div id="profile-item-file" class="col-md-6 btn btn-item-upload fileUpload" style="margin: 20px 10px 10px 6px;">
+                                    <i class="fi-photo"></i>&nbsp;Post a Photo or Video
+                                    <input id="item-input" class="item-input upload" name="item_file" type="file" data-toggle="modal" data-target="#item-modal" />
+                                </div>
+                                <!-- <p class="video-time">(Video must be 30 seconds or less)</p> -->
+                                <div class="vid-caption-upload col-md-6 profile-item hidden">
+                                    <h3 class="caption video-caption">Video Caption:</h3>
+                                    <textarea autofocus maxlength="160" id="custom-video-caption" class="form-control" name="custom-video-caption" rows="2" style="resize:none"></textarea> 
+                                    <button class="btn btn-primary video-save right" type="submit"><i class="fa fa-thumbs-o-up"></i>&nbsp;Post</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div id="results" class="row profile-row">
+                        
+                        </div>
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 profile-item animation_image" style="display:none" align="center">
+                            <img src="img/ajax-loader.gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal Section -->
+    <div class="modal fade" id="account-modal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header login_modal_header">
+                    <button type="button" id="modal-close" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                    <h2 class="modal-title" id="changeModalLabel">Change Your Password</h2>
+                </div>
+                <div class="modal-body login-modal">
+                    <div class="clearfix"></div>
+                    <div id="change-container">
+                        <div id="change-response"></div>
+                        <div class="change-modal-content">
+                            <form id="change-form" class="change-form" name="change-form" method="GET">
+                                <div class="form-group">
+                                    <input type="password" id="change-current" name="change-current" placeholder="Current Password" value="" class="form-control login-field">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="change-new" name="change-new" placeholder="New Password" value="" class="form-control login-field">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="change-new-again" name="change-new-again" placeholder="New Password (again)" value="" class="form-control login-field">
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" id="submit_change" class="btn btn-default modal-login-btn" value="Change Password">
+                                </div>
+                            </form>
+                        </div>
+                    </div>   
+                <div class="clearfix"></div>
+                <div class="modal-footer login_modal_footer">
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="crop-item">
+
+        <!-- Cropping modal -->
+        <div class="modal fade" id="item-modal" aria-hidden="true" aria-labelledby="item-modal-label" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-no-border">
+                <div class="modal-content">
+                    <div class="modal-header picture-modal">
+                        <button class="close" data-dismiss="modal" type="button">&times;</button>
+                        <h2 class="modal-title" id="item-modal-label">Add a Pic</h2>
+                    </div>
+                    <div class="modal-body modal-body-avatar">
+                    <div id="item-failed-upload-message"></div>
+                    <form class="item-pic-upload hidden" action="http://petstapost.com/mobile/post-upload.php" method="POST" enctype="multipart/form-data">
+                        <input type="file" name="my_file" class="hidden" multiple="multiple" />
+                        <input type="text" id="item-filter-input" name="item" class="hidden" value="">
+                            <!-- Current item -->
+                            <div class="item-view">
+                                <img src="" alt="Pic Not Found">
+                            </div>
+                            <div class="row item-btns">
+                                <div class="col-md-12">
+                                    <div class="btn-group-wrap">
+                                        <div class="btn-group">
+                                          <button id="bw-item" class="btn btn-primary btn-filter left" type="button">Black &amp; White</button>
+                                          <button id="chrome-item" class="btn btn-primary btn-filter left" type="button">Chrome</button>
+                                          <button id="bold-item" class="btn btn-primary btn-filter left" type="button">Bold</button>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group-wrap">
+                                        <div class="btn-group">
+                                          <button id="fade-item" class="btn btn-primary btn-filter left" type="button">Fade</button>
+                                          <button id="color-blast-item" class="btn btn-primary btn-filter left" type="button">Color Blast</button>
+                                          <button id="antique-item" class="btn btn-primary btn-filter left" type="button">Antique</button>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group-wrap">
+                                        <div class="btn-group">
+                                          <button id="brighten-item" class="btn btn-primary btn-filter left" type="button">Brighten</button>
+                                          <button id="enhance-item" class="btn btn-primary btn-filter left" type="button">Enhance</button>
+                                          <button id="original-item" class="btn btn-primary btn-filter left" type="button">Original</button>
+                                          <span id="item-filter" class="hidden">original-filter</span>
+                                          <span id="item-username" class="hidden"></span>
+                                          <span id="item-filename" class="hidden"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption-group">
+                                <h3 class="caption">Caption:</h3>
+                                <textarea class="form-control custom-caption" name="caption" rows="2" style="resize:none" maxlength="160" onKeyUp="mentionCaption()"></textarea> 
+                                <ul class="dropdown-menu" id="mention-results-caption"></ul>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button id="close-modal-item" class="btn btn-primary item-nope left" type="reset"><i class="fa fa-thumbs-o-down"></i>&nbsp;Nope</button>
+                                    <button class="btn btn-primary item-save right" type="submit"><i class="fa fa-thumbs-o-up"></i>&nbsp;I like it</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="item-body">
+                            <form class="item-form" action="http://petstapost.com/crop-item.php" enctype="multipart/form-data" method="post">
+                                <div class="item-upload hidden">
+                                    <input class="item-src" name="item_src" type="hidden">
+                                    <input class="item-data" name="item_data" type="hidden">
+                                    <input id="item-body-username" class="username" name="username" type="hidden" value="">
+                                    <!-- <i class="fi-photo"></i>&nbsp; -->
+                                    <!-- <span>Upload Photo</span> -->
+                                    <input type="file" name="my_file" class="hidden" multiple="multiple" />
+                                    <!-- <input id="item-input" class="item-input upload" name="item_file" type="file" accept="image/*" /> -->
+                                </div>
+
+                                <!-- Crop and preview -->
+                                <div class="row crop-preview-item hidden">
+                                    <div class="col-md-9">
+                                        <div class="item-wrapper"></div>
+                                    </div>
+                                    <div class="col-md-3 preview-div">
+                                        <h3 class="preview">Preview</h3>
+                                        <div class="item-preview preview-lg"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row item-btns">
+                                    <div class="col-md-3 right">
+                                        <button class="btn btn-primary btn-block item-save hidden" type="submit"><i class="fa fa-crop"></i>&nbsp;Crop</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; <span class="logo" style="color: #90f5a5;">Petstapost</span> <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/petstapost.js"></script>
+    
+    <!-- Ajax Popup -->
+    <script src="js/magnific-popup.min.js"></script>
+
+    <script src="js/jquery-browser.js"></script>
+
+    <script src="js/cropper.min.js"></script>
+
+    <script src="js/crop-item-kibble.js"></script>
+
+    <script src="js/transloadit.min.js"></script>
+
+    <script src="cordova.js"></script>
+
+    <div id="script-container"></div>
+
+    <script type="text/javascript">
+
+        $(function() {
+
+            var kibble_username = getUrlParameter('user');
+            var autologin = getUrlParameter('autologin');
+
+            $("#profile-link").attr("href", "yappy.html?user="+kibble_username);
+            $(".home-link").attr("href", "yappy.html?user="+kibble_username);
+
+            $(".show-notifications").attr("href", "http://petstapost.com/mobile/show-notifications.php?user="+kibble_username);
+
+            $("#item-username").html(kibble_username);
+            $("#item-body-username").attr("value", kibble_username);
+
+            if (autologin == 1) {
+                $.ajax({
+                    type: "POST",
+                    url: 'http://petstapost.com/mobile/autologin.php',
+                    data: 'username='+kibble_username,
+                    success: function(resp) {
+                        $("#autologin-script").html(resp);
+                    },
+                    error: function() {
+                        $("#error-container").html('<h1 style="padding: 100px 40px 0 40px;">Could not auto-login.</h1>');
+                    }
+                });
+            }
+
+            var username = localStorage.getItem('pp_username');
+
+            if (!username) {
+                window.location.href = 'index.html';
+                localStorage.clear();
+            }
+
+            if (username != kibble_username) {
+                window.location.href = '404.shtml';
+            } else if (username == kibble_username) {
+                $.ajax({
+                    type: "POST",
+                    url: 'http://petstapost.com/mobile/kibble.php',
+                    data: 'user='+username,
+                    success: function(resp) {
+                        $("#kibble-script").html(resp);
+                    },
+                    error: function() {
+                        $("#error-container").html('<h1 style="padding: 100px 40px 0 40px;">Could not retrieve Kibble.</h1>');
+                    }
+                });
+            }
+
+            // notifications 
+            $.ajax({
+                type: "POST",
+                url: "http://petstapost.com/mobile/get-notifications.php",
+                data: 'username='+kibble_username,
+                cache: false,
+                success: function(number){
+                    if (number > 0) {
+                        $('.notifications').html(number);
+                        $('.drop-notifications').html(number);
+                        $('.mobile-notifications').html(number);
+                    } else {
+                        $('.notifications').addClass('hidden');
+                        $('.drop-notifications').addClass('hidden');
+                        $('.mobile-notifications').addClass('hidden');
+                    }
+                },
+                error: function(){
+                    $("#error-container").html('<h1 style="padding: 100px 40px 0 40px;">Could not get notifications.</h1>');
+                }
+            });
+
+            $('.show-notifications').magnificPopup({
+                type: 'ajax',
+                alignTop: true,
+                overflowY: 'scroll'
+            });
+
+        });
+
+    </script>
+
+    <div id="autologin-script"></div>
+
+    <div id="kibble-script"></div>
+
+</body>
+
+</html>
